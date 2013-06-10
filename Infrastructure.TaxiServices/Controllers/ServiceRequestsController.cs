@@ -11,14 +11,14 @@ namespace Infrastructure.TaxiServices.Controllers
 {
     public class ServiceRequestsController : ApiController
     {
-        private List<ServiceRequest> _serviceQueue;
+        private Queue<ServiceRequest> _serviceQueue;
 
         public ServiceRequestsController()
         {
             // No session in WebApi without jumping through hoops
             //_serviceQueue = WebApiApplication["_serviceQueue"];
 
-            _serviceQueue = new List<ServiceRequest>();
+            _serviceQueue = new Queue<ServiceRequest>();
             _serviceQueue.Add(new ServiceRequest("222-222-2222", "Downtown 7-11"));
             _serviceQueue.Add(new ServiceRequest("555-222-5555", "Downtown Dry Cleaners"));
             _serviceQueue.Add(new ServiceRequest("888-222-8888", "Downtown Butcher Shop"));
@@ -28,7 +28,7 @@ namespace Infrastructure.TaxiServices.Controllers
 
         // GET api/servicerequest
 //        public IEnumerable<string> Get()
-        public IList<ServiceRequest> Get()
+        public Queue<ServiceRequest> Get()
         {
             return _serviceQueue;
         }
