@@ -22,6 +22,7 @@ namespace Infrastructure.TaxiServices.Controllers
             _serviceQueue.Add(new ServiceRequest("222-222-2222", "Downtown 7-11"));
             _serviceQueue.Add(new ServiceRequest("555-222-5555", "Downtown Dry Cleaners"));
             _serviceQueue.Add(new ServiceRequest("888-222-8888", "Downtown Butcher Shop"));
+            _serviceQueue.Add(new ServiceRequest("444-222-1111", "Downtown Bakery Shop"));
 
             //WebApiApplication["_serviceQueue"] = _serviceQueue;
         }
